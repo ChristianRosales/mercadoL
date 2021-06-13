@@ -1,0 +1,71 @@
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size: 12px;
+    
+}
+header {
+    background-color: #EAC926;
+}
+
+img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.titulares {
+    font-size: 24px;
+}
+
+article:first-child{
+    font-size: 18px;
+}
+article {
+    text-align: center;
+    font-size: 16px;
+    
+}
+.burger-menu {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.burger-menu > i{ 
+    background-color: #1259c3;
+    color: white;
+    padding: 12px;
+    margin: 1rem;
+    border-radius: 8px;
+    font-size: 24px;
+    
+}
+
+.center{
+    text-align: center;
+}
+
+
+
+
+footer>section>i{
+    font-display: inline-block;
+    color: blue;
+    font-size: 2em;
+    /*width: 100%;*/
+    margin-left: 40%;
+    margin-right: 40%;
+
+    border: 2px solid red;
+
+}
+footer>section{
+    text-align: center;
+    font-display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid red;
+
+}
