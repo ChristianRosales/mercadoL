@@ -13,37 +13,76 @@ img {
     width: 100%;
 }
 /*encabezado*/
-
-header {
-    background-color: #EAC926;
-}
-  
-  
-.burger-menu {
-    text-align: center;
-    }
-.burger-menu > i{ 
-        background-color: #1259c3;
-        color: white;
-        padding: 12px;
-        margin: 1rem;
-        border-radius: 8px;
-        font-size: 24px;        
-}
-.slogan{
+.hamburguer-button {
+    background-color: #03264C;
+    color: #fff;
     display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
     text-align: center;
-    margin: 10px;
+    font-size: 18px;
+    margin: auto;
 }
-a{
-    text-decoration: none;
-    color: black;
+.main-header {
+    background-color: #EAC926;
+    padding: 20px;
 }
+/*top-bar organizando...*/
+.main-header-top-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.logo {
+    width:50%;
+    padding: 0;
+}
+
+ .search-container {
+    width: 50%;
+    margin: auto;
+    padding: 0 0 0 10px;
+    position: relative;
+  }
  
-ul{
-    list-style: none;
-    padding: 10px;    
+  .search-container input{
+    border: none;
+    padding: 6%;
+    width: 100%;
+    border-radius: 8px;
+    background: white;
 }
+  
+   .search-container > button {
+    background: white;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: absolute;
+    right: 0%;
+    padding: 6%;
+   }
+
+.copy-header {
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+/*top-bar organizado*/
+
+section.banner img{
+    width: 100%;
+}
+.main-navbar {
+    display: none;
+}
+
+
 /*----------------main principal*/
 
 main {
@@ -84,11 +123,18 @@ main {
 color:#666;
 font-size: 16px;
 margin-top: 5px;
+display: none;
+}
+article:hover {
+    box-shadow: 0 0 10px rgb(100,100,100);
+}
+article:hover .descripcion{
+    display: block;
 }
 
 article {
     margin: 10px 0; 
-
+    transition: 0.5s;
 }
 .caja {
     background-color: white;
@@ -97,46 +143,114 @@ article {
     position: relative;
     width: 100%;
 }
-
+.caja>i {
+    transition: all 1s;
+}
+article:hover .caja>i{
+    transform: rotateZ(360deg);
+}
 /*----------pie de pagina*/
 footer {
    text-align: center;
    background-color: white;
    color: #666;
-
+   padding: 20px;
 }
 
 .iconosF {
     color: #1259c3;
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 10px;
-    padding: 10vw 10vw 0;
+    padding-top: 15%;
+    transition: 450ms;
+}
+.iconosF:hover {
+    color: #39b54a;
 }
 
 footer>section{
     color: #666;
-    padding: 0 10vw;
+    padding: 0 5%;
 }
 
-footer>section > b {
+footer>section > h3 {
     
-    font-weight: bolder;
+    font-weight: bold;
 }    
-.pie{
-    font-size: 10px;
+.copyright{
     text-align: left;
-    padding: 5%;    
+    margin-top: 5%;
 }
+
 
 @media (min-width: 361px){
 /*tablet*/
+
+.hamburguer-button {
+    display: none;
+}
+/*encabezado*/
+.main-header-top-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.logo {
+    width: 30%;
+}
+.search-container{
+    width: 30%;
+}
+.copy-header {
+    width: 40%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 13px;
+    margin: auto;
+    padding: 0 0 0 10px;
+}
+
+/*barra de navegacion*/
+.main-navbar {
+    display: flex;
+    /*flex-flow: row wrap;*/
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.main-navbar ul {
+    display: flex;
+}
+.main-navbar li {
+    margin: 0 5px;
+}
+.main-navbar .right-navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: right; 
+}
+.main-navbar .left-navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+
+/*estilo de listas y enlaces*/
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-navbar a {
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 13px ;
+}
+/*tarjeta de producto*/
 article {
     box-shadow: 0 0 10px rgb(100,100,100);
   }
-.burger-menu{
-    display: none;
-}
-
 article {
     width: 45%;
 }
@@ -146,67 +260,8 @@ article {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-
-}
-/*encabezado*/
-
-header {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
-
 }
 
-#logo {
-    display: block;
-    width: 30%;
-    margin: 3% 0 3% 3%;
-    padding: 0;
-}
-
-.search-container {
-    width: 30%;
-    margin: 0;
-    padding: 6% 0;
-    text-align: center;
- }
-
- .search-container input {
-     width: 80%;
-     margin: 0;
-     padding: 0;
-  }
-
-.slogan{
-    display: block;
-    width: 37%;
-    text-align: left;
-    margin: 0;
-    padding: 7% 3%;
-    
-}
-
-  nav {
-     width: 100%;
-     margin: 0;
-     padding: 0; 
-     display: flex;
-     flex-flow: row wrap;
-     align-content: flex-start;
-     justify-content: space-between;
-    }
-nav ul {
-    width: 40%;
-    margin: 3%;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 3%;
-}
-.ulDer{
-    text-align: right;
-}
 }
 @media (min-width: 769px){
 /*desktop*/
@@ -214,6 +269,19 @@ nav ul li {
 .burger-menu{
     display: none;
 }
+.main-header-top-bar, .main-navbar {
+    max-width: 1200px;
+    margin: auto;
+}
+.copy-header {
+    max-width: none;
+    font-size: 16px;
+    margin: auto;
+}
+.main-navbar a {
+    margin-top: 40px;
+    font-size: 16px;
+    }
 article {
     width: 22%;
 }
@@ -224,53 +292,19 @@ article {
     align-items: flex-start;
 
 }
-}
-
-@media (max-width: 360px){
-/*mobile*/
-    nav {
-        display: none;
-    }
-
-    #logo {
-    display: inline;
-    width: 50%;
-    padding:5%;
-}
-
-
- .search-container {
-    float: right;
-    width: 50%;
-    padding-top: 5%;
-    padding-right: 5%;
+/*pie de pagina*/
+footer {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
-
-  }
- 
-  .search-container input{
-    display: block;  
-    border: none;
-    padding: 6%;
-    width: 100%;
-    border-radius: 6px;
-    background: white;
 }
-  
-   .search-container > button {
-    display: block;
-    background: white;
-    color: #666;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 1% 1%;
-    border-radius: 6px;
-    position: absolute;
-    right: 5%;
-
+footer section {
+    width: 30%;
+    text-align: center;
+    margin:auto;
+    padding: 0;
 }
+
 
 }

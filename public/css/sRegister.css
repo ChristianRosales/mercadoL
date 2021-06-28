@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ebebeb;
+    font-family: 'Roboto',sans-serif;
+    font-size: 12px;
+}
+img {
+    display: block;
+    width: 100%;
+}
+/*encabezado*/
+.hamburguer-button {
+    background-color: #03264C;
+    color: #fff;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+.main-header {
+    background-color: #EAC926;
+    padding: 20px;
+}
+/*top-bar organizando...*/
+.main-header-top-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.logo {
+    width:50%;
+    padding: 0;
+}
+
+ .search-container {
+    width: 50%;
+    margin: auto;
+    padding: 0 0 0 10px;
+    position: relative;
+  }
+ 
+  .search-container input{
+    border: none;
+    padding: 6%;
+    width: 100%;
+    border-radius: 8px;
+    background: white;
+}
+  
+   .search-container > button {
+    background: white;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: absolute;
+    right: 0%;
+    padding: 6%;
+   }
+
+.copy-header {
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+/*top-bar organizado*/
+
+section.banner img{
+    width: 100%;
+}
+.main-navbar {
+    display: none;
+}
+/*formulario*/
+.create-form {
+    padding: 20px;
+}
+.control-formulario {
+    margin-bottom: 15px;
+
+}
+.control {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+}
+.create-form .control-formulario label {
+    margin: 15px 0;
+    font-style: normal;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+.combo1 .perfilusr {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    font-style: normal;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.combo1 label{
+    display: inline;
+    margin: 0 10px;
+    font-weight: 300;
+    font-size: 14px;
+}
+.combo2 .interes {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    font-style: normal;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.combo2 {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50%;
+}
+.combo2 > *{
+    display: block;
+    width: 50%;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.btn {
+    margin: 10% 0;
+    text-align: center;    
+}
+.link-home{
+    text-decoration: none;
+    color: white;
+}
+.btn button {
+    background-color: #03264C;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 14px;
+    width: 100px;
+    border-radius: 8px;
+    border: none;
+    margin: 2%;
+}
+
+/*----------pie de pagina*/
+footer {
+    text-align: center;
+    background-color: white;
+    color: #666;
+    padding: 20px;
+ }
+ 
+ .iconosF {
+     color: #1259c3;
+     font-size: 3em;
+     margin-bottom: 10px;
+     padding-top: 15%;
+     transition: 450ms;
+ }
+ .iconosF:hover {
+     color: #39b54a;
+ }
+ 
+ footer>section{
+     color: #666;
+     padding: 0 5%;
+ }
+ 
+ footer>section > h3 {
+     
+     font-weight: bold;
+ }    
+ .copyright{
+     text-align: left;
+     margin-top: 5%;
+ }
+ 
+ @media (min-width: 400px){
+    /*tablet*/
+    
+    .hamburguer-button {
+        display: none;
+    }
+    /*encabezado*/
+    .main-header-top-bar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .logo {
+        width: 30%;
+    }
+    .search-container{
+        width: 30%;
+    }
+    .copy-header {
+        width: 40%;
+        text-align: right;
+        font-weight: bold;
+        font-size: 13px;
+        margin: auto;
+        padding: 0 0 0 10px;
+    }
+    
+    /*barra de navegacion*/
+    .main-navbar {
+        display: flex;
+        /*flex-flow: row wrap;*/
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .main-navbar ul {
+        display: flex;
+    }
+    .main-navbar li {
+        margin: 0 5px;
+    }
+    .main-navbar .right-navbar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: right; 
+    }
+    .main-navbar .left-navbar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: left;
+    }
+    
+    /*estilo de listas y enlaces*/
+    .main-navbar ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .main-navbar a {
+        text-decoration: none;
+        color: #222222;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 13px ;
+    }
+    
+/*formulario*/
+
+.create-form {
+    padding: 20px 20%;
+    text-align: center;
+}
+div.combo1 label{
+    display: inline;
+    margin: 0 10px;
+    font-weight: normal;
+
+}
+.combo2 input{
+display: block;
+    width: 10px;
+}
+.combo2 label {
+    display: block;
+    width: 100px;
+    font-weight: normal;
+    text-align: center;
+}
+.combo2 {
+    width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0;
+    max-width: 240px;
+    margin: auto;
+}
+.create-form input, textarea {
+    text-align: center;
+}
+}    
+ @media (min-width: 769px){
+    /*desktop*/
+    
+    .burger-menu{
+        display: none;
+    }
+    .main-header-top-bar, .main-navbar {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .copy-header {
+        max-width: none;
+        font-size: 16px;
+        margin: auto;
+    }
+    .main-navbar a {
+        margin-top: 40px;
+        font-size: 16px;
+    }
+    /*pie de pagina*/
+    footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer section {
+        width: 30%;
+        text-align: center;
+        margin:auto;
+        padding: 0;
+    }
+    
+    /*formulario*/
+
+
+}
